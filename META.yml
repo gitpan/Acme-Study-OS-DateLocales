@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Acme-Study-OS-DateLocales
-version:            0.01
+version:            0.02
 abstract:           study date-specific locales
 author:
     - Slaven Rezic <srezic@cpan.org>
