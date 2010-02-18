@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2010 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +16,7 @@ package Acme::Study::OS::DateLocales;
 use 5.008;
 
 use strict;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use base qw(Exporter);
 our @EXPORT = qw(weekday_and_month_names_dump);
@@ -181,9 +181,12 @@ date-specific locale operations. Some of the questions to answer:
 =item Can we rely on the fact that the locale implementation will
 return "bytes" in the given charset (encoding)?
 
-=item Is the %OB extension of <POSIX/strftime> supported?
+=item Is the %OB extension of L<POSIX/strftime> supported?
 
 =back
+
+The results make me believe that one should not use POSIX-based
+locales for dates, but rather use L<DateTime::Locale>.
 
 =head2 RESULTS
 
